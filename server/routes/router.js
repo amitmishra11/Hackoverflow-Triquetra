@@ -28,6 +28,18 @@ route.get('/blog', (req,res)=>
 res.render('blog');
 })
 
+route.get('/maps', (req,res)=>
+{
+// res.send("Crud Application by abhishek");
+res.render('maps');
+})
+
+route.get('/medc', (req,res)=>
+{
+// res.send("Crud Application by abhishek");
+res.render('medc');
+})
+
 // API
 route.post('/api/users', controller.create);
 route.get('/api/users', controller.find);
