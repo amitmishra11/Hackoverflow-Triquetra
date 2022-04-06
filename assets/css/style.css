@@ -26,7 +26,7 @@ height: 50px!important;
 #topbar {
   background: var(--green);
   padding: 10px 0;
-  font-size: 13px;
+  font-size: 15px;
 }
 #topbar .contact-info i {
   font-style: normal;
@@ -105,25 +105,26 @@ height: 95vh;
 }
 #bannerCarousel .carousel-inner .card .img-1{
 display: flex;
-background: url("../images/invest.png") no-repeat center;
+background: url("img1.jpg") no-repeat center;
 color: #111;
-background-size: cover;
-background-attachment: fixed;
-background-color: #111;
+background-size: 1260px;
+background-attachment:scroll;
+background-color: pink;
+width: 100%;
 }
 #bannerCarousel .carousel-inner .card .img-2{
 background: url("../images/work.png") no-repeat center;
 color: #111;
-background-color: #111;
+background-color: pink;
 background-size: cover;
-background-attachment: fixed;
+background-attachment: scroll;
 }
 #bannerCarousel .carousel-inner .card .img-3{
 background: url("../images/piggy.png") no-repeat center;
-background-color: #111;
+background-color: pink;
 color: #111;
 background-size: cover;
-background-attachment: fixed;
+background-attachment: scroll;
 }
 #bannerCarousel .carousel-inner .card .card-text i{
 color: var(--green);
@@ -225,7 +226,8 @@ margin: 10px;
 border-radius: 5px;
 }
 #roadmap .button-container .btn:hover{
-box-shadow: 10px 10px 8px #ccc;
+position: relative;
+top: -1.5px;
 }
 #roadmap .row .icon>i{
 font-size: 40px;
