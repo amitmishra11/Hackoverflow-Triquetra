@@ -33,9 +33,10 @@ h6 {
 /* topnav */
 
 #topbar {
-    background: var(--green);
-    padding: 10px 0;
-    font-size: 15px;
+  background: var(--green);
+  padding: 10px 0;
+  font-size: 15px;
+
 }
 
 #topbar .contact-info i {
@@ -126,59 +127,55 @@ h6 {
 
 /* Carousel */
 
-#bannerCarousel .carousel-inner .card {
-    border: none;
+#bannerCarousel .carousel-inner .card{
+border: none;
+}
+#bannerCarousel .carousel-inner .card .card-img{
+height: 95vh;
+}
+#bannerCarousel .carousel-inner .card .img-1{
+display: flex;
+background: url("img1.jpg") no-repeat center;
+color: #111;
+background-size: 1260px;
+background-attachment:scroll;
+background-color: pink;
+width: 100%;
+}
+#bannerCarousel .carousel-inner .card .img-2{
+background: url("../images/work.png") no-repeat center;
+color: #111;
+background-color: pink;
+background-size: cover;
+background-attachment: scroll;
+}
+#bannerCarousel .carousel-inner .card .img-3{
+background: url("../images/piggy.png") no-repeat center;
+background-color: pink;
+color: #111;
+background-size: cover;
+background-attachment: scroll;
+}
+#bannerCarousel .carousel-inner .card .card-text i{
+color: var(--green);
+}
+#bannerCarousel .carousel-inner .card .card-text{
+font-weight: 500;
+}
+#bannerCarousel .carousel-inner .card .card-text .btn{
+background-color: var(--green);
+color: #fff;
+font-family: var(--text);
+}
+#bannerCarousel .carousel-inner .card .card-text .btn:hover{
+background-color: transparent;
+border: 2px solid var(--green);
+color: var(--green);
+transform: scale(0.97);
+
 }
 
-#bannerCarousel .carousel-inner .card .card-img {
-    height: 95vh;
-}
 
-#bannerCarousel .carousel-inner .card .img-1 {
-    display: flex;
-    background: url("../images/invest.png") no-repeat center;
-    color: #111;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #111;
-}
-
-#bannerCarousel .carousel-inner .card .img-2 {
-    background: url("../images/work.png") no-repeat center;
-    color: #111;
-    background-color: #111;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#bannerCarousel .carousel-inner .card .img-3 {
-    background: url("../images/piggy.png") no-repeat center;
-    background-color: #111;
-    color: #111;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#bannerCarousel .carousel-inner .card .card-text i {
-    color: var(--green);
-}
-
-#bannerCarousel .carousel-inner .card .card-text {
-    font-weight: 500;
-}
-
-#bannerCarousel .carousel-inner .card .card-text .btn {
-    background-color: var(--green);
-    color: #fff;
-    font-family: var(--text);
-}
-
-#bannerCarousel .carousel-inner .card .card-text .btn:hover {
-    background-color: transparent;
-    border: 2px solid var(--green);
-    color: var(--green);
-    transform: scale(0.97);
-}
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -269,42 +266,40 @@ h6 {
 
 /* roadmap section */
 
-#roadmap {
-    text-align: center;
-    background-color: var(--blue);
+#roadmap{
+text-align: center;
+background-color: var(--blue);
+} 
+#roadmap .button-container .btn{
+color:white;
+background-color: var(--green);
+align-self: center;
+padding: 15px 32px;
+margin: 10px;
+border-radius: 5px;
+}
+#roadmap .button-container .btn:hover{
+position: relative;
+top: -1.5px;
+}
+#roadmap .row .icon>i{
+font-size: 40px;
+color: var(--green);
+border: 2px solid var(--green);
+border-radius: 50%;
+margin-bottom: 15px;
+padding: 20px;
+}
+#roadmap .row .icon>i:hover{
+background-color: var(--green);
+color: #fff;
+cursor: pointer;
+}
+#roadmap .row h5{
+color: var(--green);
+
 }
 
-#roadmap .button-container .btn {
-    color: white;
-    background-color: var(--green);
-    align-self: center;
-    padding: 15px 32px;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-#roadmap .button-container .btn:hover {
-    box-shadow: 10px 10px 8px #ccc;
-}
-
-#roadmap .row .icon>i {
-    font-size: 40px;
-    color: var(--green);
-    border: 2px solid var(--green);
-    border-radius: 50%;
-    margin-bottom: 15px;
-    padding: 20px;
-}
-
-#roadmap .row .icon>i:hover {
-    background-color: var(--green);
-    color: #fff;
-    cursor: pointer;
-}
-
-#roadmap .row h5 {
-    color: var(--green);
-}
 
 
 /* counter Section */
@@ -663,8 +658,10 @@ border-bottom-right-radius: 20px; */
     }
 }
 
+
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
     }
 }
+
