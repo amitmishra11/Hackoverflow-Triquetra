@@ -1,17 +1,28 @@
 const express = require('express');
 const dotenv = require('dotenv');
+// const mongoose=require('mongoose');
 const morgan = require('morgan');
 const bodyparser = require("body-parser");
 const path = require('path');
+const passport=require('passport');
+const session=require('express-session');
+// const MongoStore =require('connect-mongo')(session)
 
 // const services = require('../services/render');
 // const controller = require('../controller/controller');
 
 const connectDB=require('./server/database/connection');
+const { default: mongoose } = require('mongoose');
+
 
 const app = express();
 
+// BAELOW IS TO LOAD CONFIG
 dotenv.config( { path : 'config.env'} )
+
+// Passport config
+require('./server/controller/controller')(passport)
+
 const PORT = process.env.PORT || 8000
 
 // log requests
@@ -30,6 +41,20 @@ app.set("view engine", "ejs")
 // IF NOT IN VIEWS THEN SPECIFY PATH OF FOLDER
 // EXAMPLE:
 //app.set("views", path.resolve(__dirname, "views/ejs"))
+
+
+// Session Middleware and we have to put it above passport as use of session is there
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false,
+    // store: new MongoStore({mongooseConnection :mongoose.connection})
+    // cookie: { secure: true }
+  }))
+
+// PASSPORT MIDDLEWARE
+app.use(passport.initialize())
+app.use(passport.session())
 
 // load assets
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
@@ -57,5 +82,6 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 // loading routers
 app.use('/',require('./server/routes/router'))
+app.use('/auth',require('./server/routes/auth'))
 
 app.listen(PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
