@@ -4,21 +4,21 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require("body-parser");
 const path = require('path');
-const passport=require('passport');
-const session=require('express-session');
+const passport = require('passport');
+const session = require('express-session');
 // const MongoStore =require('connect-mongo')(session)
 
 // const services = require('../services/render');
 // const controller = require('../controller/controller');
 
-const connectDB=require('./server/database/connection');
+const connectDB = require('./server/database/connection');
 const { default: mongoose } = require('mongoose');
 
 
 const app = express();
 
 // BAELOW IS TO LOAD CONFIG
-dotenv.config( { path : 'config.env'} )
+dotenv.config({ path: 'config.env' })
 
 // Passport config
 require('./server/controller/controller')(passport)
@@ -32,15 +32,15 @@ app.use(morgan('tiny'));
 connectDB();
 
 // parse request to body-parser
-app.use(bodyparser.urlencoded({ extended : true}))
+app.use(bodyparser.urlencoded({ extended: true }))
 
 // set view engine
 app.set("view engine", "ejs")
-// IF WE ARE USING EJS,THEN NO NEED TO SPECIFY FOLDER NAME 
-// AS WE HAVE EVERYTHING IN VIEWS FOLDER
-// IF NOT IN VIEWS THEN SPECIFY PATH OF FOLDER
-// EXAMPLE:
-//app.set("views", path.resolve(__dirname, "views/ejs"))
+    // IF WE ARE USING EJS,THEN NO NEED TO SPECIFY FOLDER NAME 
+    // AS WE HAVE EVERYTHING IN VIEWS FOLDER
+    // IF NOT IN VIEWS THEN SPECIFY PATH OF FOLDER
+    // EXAMPLE:
+    //app.set("views", path.resolve(__dirname, "views/ejs"))
 
 
 // Session Middleware and we have to put it above passport as use of session is there
@@ -50,7 +50,7 @@ app.use(session({
     saveUninitialized: false,
     // store: new MongoStore({mongooseConnection :mongoose.connection})
     // cookie: { secure: true }
-  }))
+}))
 
 // PASSPORT MIDDLEWARE
 app.use(passport.initialize())
@@ -58,9 +58,9 @@ app.use(passport.session())
 
 // load assets
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
-// SUPPOSE WE HAVE TO ACCESS STYLE.CSS IN THIS CSS FOLDER
-// EG:
-// just write    css/style.css
+    // SUPPOSE WE HAVE TO ACCESS STYLE.CSS IN THIS CSS FOLDER
+    // EG:
+    // just write    css/style.css
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
@@ -81,7 +81,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 // })
 
 // loading routers
-app.use('/',require('./server/routes/router'))
-app.use('/auth',require('./server/routes/auth'))
+app.use('/', require('./server/routes/router'))
+app.use('/auth', require('./server/routes/auth'))
 
-app.listen(PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
+app.listen(PORT, () => { console.log(`Server is running on http://localhost:${PORT}`) });
