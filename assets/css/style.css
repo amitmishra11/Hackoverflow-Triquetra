@@ -34,9 +34,10 @@ h6 {
 
 #topbar {
   background: var(--green);
+  /* background: #111; */
   padding: 10px 0;
   font-size: 15px;
-
+  /* border-bottom: 2px solid white; */
 }
 
 #topbar .contact-info i {
@@ -82,6 +83,7 @@ h6 {
     /* padding: 15px 0; */
     font-family: var(--text);
     transition: all 0.3s ease;
+    height: 65px;
 }
 
 .navbar .nav-item {
@@ -126,7 +128,14 @@ h6 {
 
 
 /* Carousel */
-
+.moto
+{
+    height:45px;
+    /* clip-path:polygon();*/
+    clip-path: circle();
+    /* padding-top: 5px; */
+    margin-top: 5px;
+}
 #bannerCarousel .carousel-inner .card{
 border: none;
 }
@@ -297,7 +306,6 @@ cursor: pointer;
 }
 #roadmap .row h5{
 color: var(--green);
-
 }
 
 
@@ -402,7 +410,8 @@ border-bottom-right-radius: 20px; */
     float: right;
     background-color: var(--green);
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 5px;
     font-family: var(--text);
 }
 

@@ -2,10 +2,10 @@ ul {
     list-style: none;
 }
 
-li {
-    padding: 10px 0;
+ li {
+    /* padding: 10px 0; */
     line-height: 1.2rem;
-}
+} 
 
 #app {
     color: black;
@@ -50,7 +50,8 @@ li {
     background-color: green;
     border: solid black 2px;
     padding: 35px 120px 30px;
-    /* text-align: center; */
+    text-align: center;
+    margin-top: -10px;
 }
 
 #search {
