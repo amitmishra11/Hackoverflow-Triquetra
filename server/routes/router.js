@@ -1,53 +1,50 @@
 const express = require('express');
 const route = express.Router()
 
-const {ensureAuth,ensureGuest}=require('../middleware/auth');
+const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
 // const services = require('../services/render');
 const controller = require('../controller/controller');
 
-route.get('/',ensureGuest, (req,res)=>
-{
-// res.send("Crud Application by abhishek");
-res.render('index');
+route.get('/', ensureGuest, (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('index');
 })
 
-route.get('/index2',ensureAuth, (req,res)=>
-{
-// res.send("Crud Application by abhishek");
-res.render('index2',{
-    name:req.user.displayName
-});
+route.get('/index2', ensureAuth, (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('index2', {
+        name: req.user.displayName
+    });
 })
 
-route.get('/login', (req,res)=>
-{
-// res.send("Crud Application by abhishek");
-res.render('login');
+route.get('/login', (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('login');
 })
 
-route.get('/signup', (req,res)=>
-{
-// res.send("Crud Application by abhishek");
-res.render('signup');
+route.get('/signup', (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('signup');
 })
 
-route.get('/blog', (req,res)=>
-{
-// res.send("Crud Application by abhishek");
-res.render('blog');
+route.get('/blog', (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('blog');
 })
 
-route.get('/maps',ensureAuth, (req,res)=>
-{
-// res.send("Crud Application by abhishek");
-res.render('maps');
+route.get('/maps', ensureAuth, (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('maps');
 })
 
-route.get('/medc', (req,res)=>
-{
-// res.send("Crud Application by abhishek");
-res.render('medc');
+route.get('/medc', (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('medc');
+})
+route.get('/symptom', (req, res) => {
+    // res.send("Crud Application by abhishek");
+    res.render('symptom');
 })
 
 // route.get('/logout', (req,res)=>
