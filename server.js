@@ -6,16 +6,25 @@ const bodyparser = require("body-parser");
 const path = require('path');
 const passport = require('passport');
 const session = require('express-session');
+
+const Razorpay = require('razorpay');
 // const MongoStore =require('connect-mongo')(session)
 
 // const services = require('../services/render');
 // const controller = require('../controller/controller');
+
+const instance=new Razorpay({
+    key_id :"rzp_test_TjfI1Q9set4utL",
+    key_secret:"E49XppgTgpFBSdkAP6XzIbGx"
+})
 
 const connectDB = require('./server/database/connection');
 const { default: mongoose } = require('mongoose');
 
 
 const app = express();
+
+
 
 // BAELOW IS TO LOAD CONFIG
 dotenv.config({ path: 'config.env' })
@@ -31,6 +40,7 @@ app.use(morgan('tiny'));
 // mongodb is going to be connecgtd
 connectDB();
 
+app.use(bodyparser.json()); 
 // parse request to body-parser
 app.use(bodyparser.urlencoded({ extended: true }))
 

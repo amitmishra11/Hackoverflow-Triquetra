@@ -1,5 +1,3 @@
-
-// chat bot
 var box = document.querySelector(".bot-container");
 //console.log(box);
 const closeBot = ()=>{
@@ -7,10 +5,6 @@ console.log(box.style.display);
 box.style.display = "none";
 }
     
- 
-   
-
-
 var botui = new BotUI('my-botui-app');
 // Start Bot
 // First Messages
@@ -22,29 +16,15 @@ botui.message.bot({
     return botui.message.bot({
         loading: true,
         delay: 1500,
-        content: "I'm  LOdo. Hope you are healthy. If not I am here to help. ",
+        content: "I'm  Mr SIMP,your guide.",
     });
 })
-// .then(function () {
-//     return botui.message.bot({
-//         loading: true,
-//         delay: 1500,
-//         content: "",
-//     });
-// })
 
-// .then(function () {
-//     return botui.message.bot({
-//         loading: true,
-//         delay: 1500,
-//         content: "[BotUI](http://docs.botui.org/)",
-//     });
-// })
 .then(function () {
     return botui.message.bot({
         loading: true,
         delay: 1500,
-        content: "Do you know about it ?",
+        content: "Are you facing any of the below problems ? I will solve all for you.",
     });
 }).then(function () {
   return botui.action.button({
@@ -52,14 +32,14 @@ botui.message.bot({
         loading: true,
         addMessage: true,
         action: [{
-            text: 'Yes! I do . But i would like to hear more about it',
+            text: 'Yes! My check the hospital beds availability feature is not working',
             value: 'yes'
         }, {
-            text: 'Yes! I already do . No need of any info',
+            text: 'Yes! Give me guide to your website ',
             value: 'no'
         },{
-            text: 'No. i Dont',
-            value: 'yes'
+            text: 'No!!. i Dont need you.',
+            value: 'no'
         }]
     })
 }).then(function (res) {
@@ -67,32 +47,25 @@ botui.message.bot({
      return botui.message.bot({
                 loading: true,
                 delay: 1500,
-                content: "The latest variant of covid is OMICRON .   This varaint is claimed to be a huge jump in the evolution of the virus . ",
+                content: "The check the hospital beds availability feature will  not work if you are not logged in",
             }).then(function(){
                 return botui.message.bot({
         loading: true,
-        delay: 3000,
-        content: "This Varaint intitailly spotted in South Africa has already spread to all major countries in just a week.",
+        delay: 1000,
+        content: "So please login with simple step",
             })
        }).then(function(){
                 return botui.message.bot({
         loading: true,
         delay: 3000,
-        content: "  Some studies have shown that it is more transmissible than the delta varaint .",
+        content: "  Have a good day.",
             })
        })
        .then(function(){
                 return botui.message.bot({
         loading: true,
         delay: 3000,
-        content: "A disease modeling scientist has predicted that  it is 500% more  transmissible compared to Wuhan Strain",
-            })
-       })
-       .then(function(){
-                return botui.message.bot({
-        loading: true,
-        delay: 3000,
-        content: " There is not much data on how deadly this varaint is since the varaint is relatively new but in SouthAfrica it is found to be more deadly than the delta varaint .",
+        content: " TDFG",
             })
        })
     }     
@@ -100,13 +73,13 @@ botui.message.bot({
     return botui.message.bot({
                 loading: true,
                 delay: 1500,
-                content: "Alright . Do wear your masks and take proper precautions",
+                content: "Alright .I am always here to help you.",
             });
   }
 }).then(function () {
   return botui.message.bot({
                 loading: true,
-                delay: 1500,
+                delay: 1000,
                 content: "Bye.",
             });
 })
