@@ -32,7 +32,7 @@ dotenv.config({ path: 'config.env' })
 // Passport config
 require('./server/controller/controller')(passport)
 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 3000
 
 // log requests
 app.use(morgan('tiny'));
