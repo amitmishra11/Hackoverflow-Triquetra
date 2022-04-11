@@ -1,5 +1,5 @@
 {
-  "name": "crude_app",
+  "name": "triquetra-hackoverflow",
   "version": "1.0.0",
   "description": "express and mongo",
   "main": "server.js",
