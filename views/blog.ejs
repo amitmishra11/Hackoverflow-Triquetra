@@ -4,47 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Complete Responsive Blog Website Design Tutorial</title>
+
+    <title>Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/blog.css">
 
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-      <!-- Fonts -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-  
-      <!-- Icons -->
-      <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-      
-      <!-- stylesheet -->
-      <link rel="stylesheet" href="css/style.css">
-  
-      <!-- Owl Carousel --> 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
 <body>
-    <%- include('include/_navbar') %>
-    <!-- <header class="head">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="css\logo.jpg" class="moto" alt="chal hat bkl"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item nav-link">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <a href="/medc">Search Medicine</a>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <a href="/maps">Hospital Availability</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Features
+            </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/symptom" target="_blank">Symptoms Checker</a></li>
+                            <li><a class="dropdown-item" href="/about" target="_blank">About Us</a></li>
+                            <li><a class="dropdown-item" href="/contact" target="_blank">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="/donate" target="_blank">Donation</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li class="nav-item nav-link">
+                        <a href="/blog">Blogs</a>
+                    </li>-->
+
+                    <!-- {{#if isAuthenticated}} -->
+
+                    <!-- <li class="nav-item dropdown" id="logout">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDrop"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class ="fas fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDrop">
+                  <li><a class="dropdown-item" href="https://www.karvykra.com/UPanSearchGlobalWithPanExempt.aspx" target="_blank">Verify</a></li> -->
+                    <!--   <li><a class="dropdown-item" href="/">Logout</a></li> -->
+                    <!-- <button class="dropdown-item" type="submit"  onclick="logout()">Logout</button>
+              </ul>
+            </li> -->
+
+                    <!-- {{else}} -->
+                    <li class="nav-item nav-link">
+                        <a id="login" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <a id="signin" href="/signup">Signup</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    </div>
+
+
+    <li class="nav-item nav-link">
+        <a href="/blog">Blogs</a>
+    </li>
+
+    <!-- {{#if isAuthenticated}} -->
+
+    <li class="nav-item dropdown" id="logout">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDrop">
+            <li><a class="dropdown-item" href="https://www.karvykra.com/UPanSearchGlobalWithPanExempt.aspx" target="_blank">Verify</a></li>
+            <li><a class="dropdown-item" href="/">Logout</a></li>
+            <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
+
+        </ul>
+    </li>
+    <li class="nav-item nav-link">
+        <a>
+
+        </a>
+    </li>
+    </ul>
+
+    </div>
+    </div>
+    </nav>
+    <!--<header class="head">
         <a href="#" class="logo">
             <h3 class="heading">Triquetra Blogs</h3>
         </a>
     </header>
-    <br>
-    <br>
-    <br> -->
+    <br>-->
 
     <section class="box" id="blog">
         <div class="blog-box">
             <div class="post">
-                <img src="css/puberty.jpg" alt="" class="image">
-                <h3 class="title">Puberty/Teenagers</h3>
+                <img src="css/puberty.jpg" alt="" class="image" id="img1">
+                <h3 class="title" id="title1">Puberty/Teenagers</h3>
                 <p class="text">
-                    Puberty can be an awkward and confusing time for many young people. You may be unsure about how to deal with this stage in your life. You will notice a lot of changes in your body, but don't worry, they are all perfectly normal and they happen to everyone. Knowing what to expect can go a long way in helping you handle puberty.
+                    Puberty can be an awkward and confusing time for many young people. You may be unsure about how to deal with this stage in your life. You will notice a lot of changes in your body, but don't worry, they are all perfectly normal and they happen to everyone.
+                    Knowing what to expect can go a long way in helping you handle puberty.
 
                     <p class="text">Few points to keep in mind are-</p>
                     <ul class="text">
@@ -56,7 +143,8 @@
                     </ul>
                     <br>
                     <p class="text">
-                    As a parent you can help your child by being informed, providing reassurance, role-modelling body acceptance and a healthy lifestyle, and respecting your young person's need for more privacy. Take practical steps to support your young person through their bodily changes. Look after your own needs too.
+                        As a parent you can help your child by being informed, providing reassurance, role-modelling body acceptance and a healthy lifestyle, and respecting your young person's need for more privacy. Take practical steps to support your young person through their
+                        bodily changes. Look after your own needs too.
                     </p>
                 </p>
                 <div class="links">
@@ -122,7 +210,7 @@
             <div class="box">
                 <h3 class="title">About Us</h3>
                 <div class="about">
-                    <img class=""src="css/logo.jpg" alt="">
+                    <img class="" src="css/logo.jpg" alt="">
                     <h3>Triquetra</h3>
                     <p>We provide solutions of your medical problems at your finger tips.</p>
                     <div class="follow">
@@ -165,15 +253,56 @@
 
 
         </div>
-        <%- include('include/_footer') %>
     </section>
- 
-    <script>
-        function myFunc(x) {
-            x.classList.toggle("fa-thumbs-down");
-        }
-    </script>
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="/about">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+
+                        <li><a href="#">Why do we Exist</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/work">How it Works</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="#">Media and Awards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Engage</h4>
+                    <ul>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="#">Refer a borrower</a></li>
+                        <li><a href="#">Partner with us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/abhishek-sultaniya/P2P" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/abhishek-sultaniya/P2P" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/7878.abhishek/" target="_blank"><i class="fab fa-instagram"target="_blank"></i></a>
+                        <a href="https://www.linkedin.com/in/abhishek-6847ab22a/" target="_blank"><i class="fab fa-linkedin-in"target="_blank"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- <p style=color:white class="text-center"><i class="far fa-copyright"></i> 2021, Aasha P2P Financial Services Pvt Ltd</p> -->
+    </footer>
 
 </body>
 
-</html> 
+</html>
