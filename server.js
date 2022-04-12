@@ -13,9 +13,9 @@ const Razorpay = require('razorpay');
 // const services = require('../services/render');
 // const controller = require('../controller/controller');
 
-const instance=new Razorpay({
-    key_id :"rzp_test_TjfI1Q9set4utL",
-    key_secret:"E49XppgTgpFBSdkAP6XzIbGx"
+const instance = new Razorpay({
+    key_id: "rzp_test_TjfI1Q9set4utL",
+    key_secret: "E49XppgTgpFBSdkAP6XzIbGx"
 })
 
 const connectDB = require('./server/database/connection');
@@ -40,7 +40,7 @@ app.use(morgan('tiny'));
 // mongodb is going to be connecgtd
 connectDB();
 
-app.use(bodyparser.json()); 
+app.use(bodyparser.json());
 // parse request to body-parser
 app.use(bodyparser.urlencoded({ extended: true }))
 

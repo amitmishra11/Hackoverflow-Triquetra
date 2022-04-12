@@ -16,7 +16,6 @@ html {
     scroll-padding-top: 6rem;
 }
 
-
 section {
     padding: 2rem 7%;
 }
@@ -36,6 +35,7 @@ section {
     background: orangered;
 }
 
+
 /* .head {
     position: fixed;
     top: 0;
@@ -45,6 +45,8 @@ section {
     background: green;
     padding: 2px;   
 } */
+
+
 /* .heading{
     color: black;
 } */
@@ -57,7 +59,7 @@ section {
 
 .main {
     min-height: 80vh;
-    background-size:contain;
+    background-size: contain;
     background-position: center;
     display: grid;
     place-items: center;
@@ -76,26 +78,45 @@ section {
     border: black solid 2px;
     border-radius: .5rem;
     margin-bottom: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-box {
+    margin-top: 0px;
 }
 
 .box .blog-box .post .image {
     height: 50rem;
     width: 100%;
     border-radius: .5rem;
+}
 
+.dropdown-item {
+    font-size: medium;
 }
 
 .box .blog-box .post .title {
     padding: 2rem;
     font-size: 2.5rem;
     color: black;
+    margin-right: 5px;
+}
+
+.navbar-nav {
+    font-size: medium;
+}
+
+.fab {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 .box .blog-box .post .text {
     color: black;
     font-size: 1.6rem;
     line-height: 1.7;
-    padding-left: 2rem;
+    margin-right: 5px;
+    padding: 3px;
 }
 
 .box .sidebar .box {
@@ -103,7 +124,12 @@ section {
     border-radius: .5rem;
     overflow: hidden;
     background: white;
-    margin-bottom: 1.5rem;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    margin-top: 0px;
 }
 
 .box .sidebar .box .title {
@@ -161,11 +187,12 @@ section {
 .box .sidebar .box .category {
     padding: 1rem 10rem;
 }
+
 .box .sidebar .box .about {
     padding: 1rem 5rem;
 }
-.box .sidebar .box .p-post {
 
+.box .sidebar .box .p-post {
     margin-left: 30px;
     font-size: 1rem;
 }
@@ -241,9 +268,6 @@ section {
     color: white;
 }
 
-
-
-
 @media (max-width:980px) {
     html {
         font-size: 50%;
@@ -303,16 +327,20 @@ section {
 .far:hover {
     color: red;
 }
-.heading{
+
+.heading {
     display: block;
     text-align: center;
 }
-.follow{
+
+.follow {
     display: flex;
 }
-ul{
+
+ul {
     list-style: none;
 }
-.post img{
+
+.post img {
     height: 100px;
 }
